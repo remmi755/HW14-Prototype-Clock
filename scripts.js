@@ -70,17 +70,11 @@ const WatchChild2 = function () {
         return `${this.hh}:${this.mm}:${this.ss}:${this.ms}`
     }
 }
-
-WatchChild1.prototype = new Watch1()
-
 let watch1 = new Watch1()
 watch1.startWatch()
 watch1.addElement()
 
-let watchChild1 = new WatchChild1()
-watchChild1.startWatch()
-watchChild1.addElement()
-
+WatchChild1.prototype = new Watch1()
 WatchChild1.prototype.render = function () {
     if (this.newWatch.classList.contains('full')) {
         this.newWatch.innerHTML = this.createHhMmSsFormat()
@@ -89,11 +83,12 @@ WatchChild1.prototype.render = function () {
     }
 }
 
-WatchChild2.prototype = new Watch1()
-let watchChild2 = new WatchChild2()
-watchChild2.startWatch()
-watchChild2.addElement()
+let watchChild1 = new WatchChild1()
+watchChild1.startWatch()
+watchChild1.addElement()
 
+
+WatchChild2.prototype = new Watch1()
 WatchChild2.prototype.render = function () {
     if (this.newWatch.classList.contains('full')) {
         this.newWatch.innerHTML = this.createHhMmFormat()
@@ -101,4 +96,9 @@ WatchChild2.prototype.render = function () {
         this.newWatch.innerHTML = this.creatHhMmSsMsFormat()
     }
 }
+
+let watchChild2 = new WatchChild2()
+watchChild2.startWatch()
+watchChild2.addElement()
+
 
