@@ -2,13 +2,13 @@ body {
     margin: 50px 45%;
 }
 
-div {
+.styles {
+    border-radius: 15px;
     padding: 15px;
     background: #000;
     color: #0f0;
     display: inline-block;
     font-weight: bold;
-    border-radius: 4px;
     width: 200px;
     text-align: center;
     font-size: 36px;
