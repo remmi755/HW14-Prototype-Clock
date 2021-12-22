@@ -64,6 +64,7 @@ let WatchChild1 = function (elem) {
 }
 
 WatchChild1.prototype = Object.create(Watch.prototype);
+
 WatchChild1.prototype.render = function () {
     if (this.newWatch.classList.contains('full')) {
         this.newWatch.innerHTML = this.createHhMmSsFormat()
@@ -81,6 +82,7 @@ let WatchChild2 = function (elem) {
 }
 
 WatchChild2.prototype = Object.create(Watch.prototype);
+
 WatchChild2.prototype.render = function () {
     if (this.newWatch.classList.contains('full')) {
         this.newWatch.innerHTML = this.creatHhMmFormat()
